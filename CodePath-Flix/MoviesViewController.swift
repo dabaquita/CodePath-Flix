@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MoviesViewController: UIViewController {
 
@@ -66,6 +67,17 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = "\(title)"
         cell.descriptionLabel.text = "\(overview)"
+        
+        let baseUrl = "https://image.tmdb.org/t/p/w185"
+        let posterPath = movie["poster_path"] as! String
+        let posterUrl = URL(string: baseUrl + posterPath)
+        
+        if let posterUrl = posterUrl {
+            cell.thumbnailView.af.setImage(withURL: posterUrl)
+        } else {
+            cell.thumbnailView.image = UIImage(named: "launch_image")
+        }
+        
         return cell
     }
     

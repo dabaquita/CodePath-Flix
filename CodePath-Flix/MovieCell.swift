@@ -34,7 +34,7 @@ class MovieCell: UITableViewCell {
     private func configureThumbnailView() {
         thumbnailView.layer.cornerRadius = 10
         thumbnailView.clipsToBounds = true
-        thumbnailView.image = UIImage(named: "launch_image")
+        thumbnailView.contentMode = .scaleAspectFill
     }
     
     private func configureStackView() {
