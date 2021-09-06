@@ -15,7 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = MoviesViewController()
+        
+        // Creating View Hierarchy
+        let moviesViewController = MoviesViewController()
+        let navController = UINavigationController(rootViewController: moviesViewController)
+        
+        // Setting root and window
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }
 
