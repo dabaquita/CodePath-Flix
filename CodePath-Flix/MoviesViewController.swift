@@ -7,12 +7,11 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MoviesViewController: UIViewController {
 
     var movies = [[String: Any]]()
     let tableView = UITableView()
     
-    // MARK: View
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Movies"
@@ -25,7 +24,6 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.frame = view.bounds
     }
     
-    // MARK: URL Session
     private func setupURLSession() {
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(
@@ -52,21 +50,22 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         task.resume()
     }
-    
-    // MARK: TableView
-    private func setupTableView() {
-        view.addSubview(tableView)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-    
+}
+
+// MARK: TableView Delegate and Setup
+extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: MovieCell.identifier,
+            for: indexPath
+        ) as! MovieCell
         
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
-        cell.textLabel?.text = "Movie \(indexPath.row + 1): \(title)"
+        let overview = movie["overview"] as! String
+        
+        cell.titleLabel.text = "\(title)"
+        cell.descriptionLabel.text = "\(overview)"
         return cell
     }
     
@@ -77,6 +76,14 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Cell tapped")
+    }
+    
+    private func setupTableView() {
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 120
+        tableView.register(MovieCell.self, forCellReuseIdentifier: MovieCell.identifier)
     }
 }
 
