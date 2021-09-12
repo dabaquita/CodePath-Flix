@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078CEF7726EE724800AD5148 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CEF7626EE724800AD5148 /* MovieDetailViewController.swift */; };
 		0799EF0026DFB56300DD994B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799EEFF26DFB56300DD994B /* AppDelegate.swift */; };
 		0799EF0226DFB56300DD994B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799EF0126DFB56300DD994B /* SceneDelegate.swift */; };
 		0799EF0426DFB56300DD994B /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799EF0326DFB56300DD994B /* MoviesViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		078CEF7626EE724800AD5148 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		0799EEFC26DFB56300DD994B /* CodePath-Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodePath-Flix.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0799EEFF26DFB56300DD994B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0799EF0126DFB56300DD994B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		078CEF7326EE71F100AD5148 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0799EF0326DFB56300DD994B /* MoviesViewController.swift */,
+				078CEF7626EE724800AD5148 /* MovieDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		078CEF7426EE721A00AD5148 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				07AA09F826E6744800D38209 /* MovieCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0799EEF326DFB56300DD994B = {
 			isa = PBXGroup;
 			children = (
@@ -65,13 +84,13 @@
 		0799EEFE26DFB56300DD994B /* CodePath-Flix */ = {
 			isa = PBXGroup;
 			children = (
+				078CEF7426EE721A00AD5148 /* Cells */,
+				078CEF7326EE71F100AD5148 /* ViewControllers */,
 				0799EEFF26DFB56300DD994B /* AppDelegate.swift */,
 				0799EF0126DFB56300DD994B /* SceneDelegate.swift */,
-				0799EF0326DFB56300DD994B /* MoviesViewController.swift */,
 				0799EF0826DFB56600DD994B /* Assets.xcassets */,
 				0799EF0A26DFB56600DD994B /* LaunchScreen.storyboard */,
 				0799EF0D26DFB56600DD994B /* Info.plist */,
-				07AA09F826E6744800D38209 /* MovieCell.swift */,
 			);
 			path = "CodePath-Flix";
 			sourceTree = "<group>";
@@ -213,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0799EF0426DFB56300DD994B /* MoviesViewController.swift in Sources */,
+				078CEF7726EE724800AD5148 /* MovieDetailViewController.swift in Sources */,
 				0799EF0026DFB56300DD994B /* AppDelegate.swift in Sources */,
 				07AA09F926E6744800D38209 /* MovieCell.swift in Sources */,
 				0799EF0226DFB56300DD994B /* SceneDelegate.swift in Sources */,
