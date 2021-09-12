@@ -8,7 +8,9 @@
 import UIKit
 
 class MovieDetailViewController: UITableViewController {
-
+    
+    var movie: [String: Any]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

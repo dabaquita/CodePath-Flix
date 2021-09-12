@@ -87,7 +87,11 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("Cell tapped")
+    
+        let movieDetailVC = MovieDetailViewController()
+        movieDetailVC.movie = movies[indexPath.row]
+        
+        show(movieDetailVC, sender: self)
     }
     
     private func setupTableView() {
