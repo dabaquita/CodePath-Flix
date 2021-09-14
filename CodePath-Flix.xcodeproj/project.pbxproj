@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0728DC6F26F152D20096C76B /* MoviesGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728DC6E26F152D20096C76B /* MoviesGridViewController.swift */; };
 		078CEF7726EE724800AD5148 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CEF7626EE724800AD5148 /* MovieDetailViewController.swift */; };
 		0799EF0026DFB56300DD994B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799EEFF26DFB56300DD994B /* AppDelegate.swift */; };
 		0799EF0226DFB56300DD994B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799EF0126DFB56300DD994B /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0728DC6E26F152D20096C76B /* MoviesGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesGridViewController.swift; sourceTree = "<group>"; };
 		078CEF7626EE724800AD5148 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		0799EEFC26DFB56300DD994B /* CodePath-Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodePath-Flix.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0799EEFF26DFB56300DD994B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			children = (
 				0799EF0326DFB56300DD994B /* MoviesViewController.swift */,
 				078CEF7626EE724800AD5148 /* MovieDetailViewController.swift */,
+				0728DC6E26F152D20096C76B /* MoviesGridViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				0799EF0426DFB56300DD994B /* MoviesViewController.swift in Sources */,
 				078CEF7726EE724800AD5148 /* MovieDetailViewController.swift in Sources */,
 				0799EF0026DFB56300DD994B /* AppDelegate.swift in Sources */,
+				0728DC6F26F152D20096C76B /* MoviesGridViewController.swift in Sources */,
 				07AA09F926E6744800D38209 /* MovieCell.swift in Sources */,
 				0799EF0226DFB56300DD994B /* SceneDelegate.swift in Sources */,
 			);

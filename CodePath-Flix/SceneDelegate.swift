@@ -17,11 +17,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         
         // Creating View Hierarchy
+        let tabBarController = UITabBarController()
+        
         let moviesViewController = MoviesViewController()
-        let navController = UINavigationController(rootViewController: moviesViewController)
+        let moviesNavController = UINavigationController(rootViewController: moviesViewController)
+        tabBarController.addChild(moviesNavController)
+        moviesNavController.tabBarItem.image = UIImage(systemName: "film")
+        moviesNavController.tabBarItem.title = "Now Playing"
+        
+        let moviesGridVC = MoviesGridViewController()
+        let moviesGridNavController = UINavigationController(rootViewController: moviesGridVC)
+        tabBarController.addChild(moviesGridNavController)
+        moviesGridNavController.tabBarItem.image = UIImage(systemName: "bolt.circle")
+        moviesGridNavController.tabBarItem.title = "Superhero"
         
         // Setting root and window
-        window?.rootViewController = navController
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 

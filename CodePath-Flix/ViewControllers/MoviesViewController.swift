@@ -15,7 +15,7 @@ class MoviesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Movies"
+        self.navigationItem.title = "Movies"
         self.setupURLSession()
         self.setupTableView()
     }
