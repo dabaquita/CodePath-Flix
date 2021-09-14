@@ -86,7 +86,7 @@ class MovieDetailViewController: UIViewController {
         
         // Constraints
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: headerImageView.bottomAnchor, constant: 6).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: headerImageView.bottomAnchor, constant: 24).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: posterImageView.trailingAnchor, constant: 24).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12).isActive = true
     }
@@ -113,7 +113,6 @@ class MovieDetailViewController: UIViewController {
         
         // Constraints
         overviewLabel.translatesAutoresizingMaskIntoConstraints = false
-        overviewLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         overviewLabel.topAnchor.constraint(equalTo: posterImageView.bottomAnchor, constant: 12).isActive = true
         overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12).isActive = true
         overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12).isActive = true
