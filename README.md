@@ -43,5 +43,9 @@ Describe any challenges encountered while building the app.
 |--|
 | ![Real Device](https://github.com/dabaquita/CodePath-Flix/blob/main/RealDeviceScreen.gif) | 
 
+| Multi Device Walk Through | 
+|--|
+| ![Mutli Device](https://github.com/dabaquita/CodePath-Flix/blob/main/Multi-Device-Flix.gif) |
+
 ### Notes
 For this first part of the app, I decided to approach it entirely programmatically with no storyboards (except for the launch screen). This presented a few challenges such as getting the constraints correctly and also setting up the environment to support it. Overall, this was a really fun and great experience starting an app from scratch programmatically.
