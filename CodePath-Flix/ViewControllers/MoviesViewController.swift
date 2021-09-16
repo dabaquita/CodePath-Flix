@@ -62,17 +62,17 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         ) as! MovieCell
         
         let movie = movies[indexPath.row]
-        let title = movie["title"] as! String
-        let overview = movie["overview"] as! String
         
-        cell.titleLabel.text = "\(title)"
-        cell.descriptionLabel.text = "\(overview)"
+        if let title = movie["title"] as? String {
+            cell.titleLabel.text = "\(title)"
+        }
+        if let overview = movie["overview"] as? String {
+            cell.descriptionLabel.text = "\(overview)"
+        }
         
         let baseUrl = "https://image.tmdb.org/t/p/w185"
-        let posterPath = movie["poster_path"] as! String
-        let posterUrl = URL(string: baseUrl + posterPath)
-        
-        if let posterUrl = posterUrl {
+        if let posterPath = movie["poster_path"] as? String,
+           let posterUrl = URL(string: baseUrl + posterPath) {
             cell.thumbnailView.af.setImage(withURL: posterUrl)
         } else {
             cell.thumbnailView.image = UIImage(named: "launch_image")
