@@ -9,12 +9,13 @@ import UIKit
 
 class MoviesGridViewController: UIViewController {
 
-    var movies = [[String: Any]]()
+    private var movies = [[String: Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Superhero"
         setupURLSession()
+        setupCollectionView()
     }
     
     private func setupURLSession() {

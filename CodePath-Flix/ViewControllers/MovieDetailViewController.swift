@@ -12,12 +12,12 @@ class MovieDetailViewController: UIViewController {
     
     var movie: [String: Any]!
     
-    var headerImageView = UIImageView()
-    var posterImageView = UIImageView()
-    var overviewLabel = UILabel()
-    var titleDateStackView = UIStackView()
-    var titleLabel = UILabel()
-    var dateLabel = UILabel()
+    private var headerImageView = UIImageView()
+    private var posterImageView = UIImageView()
+    private var overviewLabel = UILabel()
+    private var titleDateStackView = UIStackView()
+    private var titleLabel = UILabel()
+    private var dateLabel = UILabel()
     
     
     override func viewDidLoad() {

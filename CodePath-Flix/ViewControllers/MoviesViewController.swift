@@ -10,8 +10,8 @@ import AlamofireImage
 
 class MoviesViewController: UIViewController {
 
-    var movies = [[String: Any]]()
-    let tableView = UITableView()
+    private var movies = [[String: Any]]()
+    private let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
