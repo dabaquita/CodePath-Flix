@@ -15,7 +15,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthrough GIF
-![Simulator Screen Recording - iPhone 12 Pro Max - 2021-09-16 at 20 01 38](https://user-images.githubusercontent.com/28579460/133703650-f76dcfff-f506-4007-9e3e-b868500cc703.gif)
+![Simulator Screen Recording - iPhone 12 Pro Max - 2021-09-21 at 10 26 59](https://user-images.githubusercontent.com/28579460/134189894-a6010738-2336-467a-aa9a-05a99cb93df5.gif)
 
 ### Notes
 Really fun part of this project was learning more about navigation and the different types of ways to arrange data like the new collection view. Overall, I really liked solidifying my knowledge on those aspects and better ways to program efficiently and effectively. 
